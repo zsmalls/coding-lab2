@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="description" content="HTML">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CS179</title>
+  <script>
+
+    let apiKey = '65d168dd78b23a03f3e4a0f31608d303'; //openweathermap apikey  
+    
+    let onPositionReceived = function(pos){
+        let {latitude, longitude} = pos.coords; // destructuring
+        let url = `http://api.openweathermap.org/data/2.5/weather?
+            lat=${latitude}&lon=${longitude}&units=metric&appid=${apiKey}`;
+        
+        fetch(url)
+            .then(resp => resp.json()) // convert response into json
+            .then(weather=> {
+                /* create a note here using the weather data */
+                console.log(`${weather.name},  ${weather.main.temp}°C`);
+            })
+        .catch(err=>{
+            console.warn(`ERROR(${err.code}): ${err.message}`);
+        })
+    }
+    navigator.geolocation.getCurrentPosition(onPositionReceived);
+    
+    </script>
+</head>
+<body>
+ 
+</body>
+</html>
+
