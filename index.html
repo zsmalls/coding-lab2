@@ -3,6 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- you need the following meta tag to make your website responsive-->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
     <title>Happify</title>
 
@@ -12,25 +13,17 @@
     <link rel="stylesheet" href="css/materialize.min.css">
     <link rel="stylesheet" href="css/main.css">
 
-
-
-    <!-- <link href="../../dist/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
-	<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" /> -->
 </head>
 
 <body>
     <!-- Navigation Bar-->
-    <!-- TODO: apply a different background color to the navigation bar 
-			by adding class names to the following div element
+
+    <!-- TODO 1: Apply a different background color to the navigation bar 
 			Hint: http://next.materializecss.com/color.html
-			Hint: e.g., class="teal accent-4"
 	-->
 
     <nav class="teal accent-4" role="navigation">
-        <!--TODO: add two class names: "nav-wrapper container" to the following div element
-			
-		-->
-        <div class="nav-wrapper container  ">
+        <div class="nav-wrapper container">
             <a href="#" class="brand-logo">Happify</a>
             <ul class="right hide-on-med-and-down black-text">
                 <li>
@@ -46,12 +39,11 @@
                     <a href="#team">Team</a>
                 </li>
             </ul>
-            <!-- When the nav bar is down-resized , the right links turn into a hamburger icon -->
+            <!-- This slide menu will only appear on a mobile screen -->
             <a href="#" data-target="slide-out" class="sidenav-trigger">
                 <i class="material-icons">menu</i>
             </a>
-            <!-- When the hamburger menu is clicked, this sidebar appears (mobile only)-->
-            <!-- The id (slide-out) should match the data-target above-->
+            <!-- Mobile Collapse: http://next.materializecss.com/navbar.html -->
             <ul id="slide-out" class="sidenav">
                 <li>
                     <a href="#about">About</a>
@@ -81,6 +73,9 @@
 
             <h4 class="header light">An intelligent interactive system that combines machine learning and human-centered design to improve our lives</h4>
             <br>
+            <!-- TODO 2: Make the button look smoothy and shiny!
+                    Hint: http://next.materializecss.com/buttons.html
+            -->            
             <a href="#prototype" class="btn-large waves-effect waves-light teal accent-4">Try it!</a>
             <br>
             <br>
@@ -110,6 +105,9 @@
                 We also took a survey of millions of people to collect different personality traits and computationally construct
                 a broad range of personas that informed the design of our system.
             </p>
+            <!-- TODO 3: Make the list better and collapsible
+                    Hint: http://next.materializecss.com/collapsible.html
+            -->
             <ul class="collapsible">
                 <li>
                     <div class="collapsible-header">
@@ -151,7 +149,9 @@
             <p class="light flow-text">
                 Try our awesome prototype! It's a fun carousel!
             </p>
-
+            <!-- TODO 4: Add a carousel component below. 
+                    Hint: Find a carousel component on your own: http://next.materializecss.com/
+            -->
             <div class="carousel carousel-slider center">
                 <div class="carousel-item red white-text" href="#one!">
                     <h2>First Panel</h2>
@@ -176,7 +176,10 @@
     <div id="team" class="section">
         <div class="container">
             <h2 class="header light">Team</h2>
-            <!--   Icon Sect3ion   -->
+            <!-- TODO 5: Make this responsive! 
+                    That is, show two cards per row on a medium screen and one card per row on a small screen
+                    Hint: Find a carousel component on your own: http://next.materializecss.com/
+            -->
             <div class="row">
                 <div class="col l3 m6 s12">
                     <div class="card">
@@ -231,6 +234,11 @@
         <br>
         <br>
     </div>
+    <!-- TODO 6: 
+        1) Add a new section here.
+        2) Link the section to the navigation bar.
+        3) Experiment with other components in http://next.materializecss.com/
+    -->
     <div class="section teal accent-4">
         <div class="container white-text center-align">
             Copyright @ Happify 2017
